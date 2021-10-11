@@ -4,10 +4,48 @@ import br.com.dio.model.Gato;
 
 public class PrimeiroPrograma {
     public static void main(String[] args) {
-        Gato gato = new Gato();
+        Gato gato = new Gato( );
+        gato.setNome("Maikon");
+        gato.setIdade(35);
+        gato.setCor("Branco");
         System.out.println(gato);
-        /*int a = 5;
-        int b = 5;
-        System.out.println("Olá Mundo " + (a+b) );*/
+
+        Livro livro1 = new Livro("O Corvo",300);
+        System.out.println(livro1);
+
+    }
+}
+
+class Livro {
+    private String nome;
+    private Integer numPaginas;
+
+    public Livro(String nome, Integer numPaginas) {
+        this.nome = nome;
+        this.numPaginas = numPaginas;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Integer getNumPaginas() {
+        return numPaginas;
+    }
+
+    public void setNumPaginas(Integer numPaginas) {
+        this.numPaginas = numPaginas;
+    }
+
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "nome='" + nome + '\'' +
+                ", numPaginas=" + numPaginas +
+                '}';
     }
 }
